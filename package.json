@@ -1,5 +1,5 @@
 {
-  "name": "giltayar-realworld-frontend-testing",
+  "name": "docker-fundamentals-demo",
   "version": "1.0.0",
   "description": "conduit on node",
   "main": "app.js",
@@ -12,7 +12,7 @@
     "dev": "nodemon ./src/app.js",
     "test": "docker-compose kill && docker-compose rm -fsv && docker-compose up -d && npm run test:mocha && docker-compose kill && docker-compose rm -fv",
     "build": "npm run build:frontend && npm run build:backend",
-    "build:backend": "docker build -f blog.Dockerfile . -t giltayar/blog-app-example",
+    "build:backend": "docker build -f blog.Dockerfile . -t dockerdemo/myblog",
     "build:frontend": "cd frontend && npm run build"
   },
   "repository": {
