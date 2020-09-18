@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    image: myblog 
+    environment:
+      PORT: 3000
+      MONGODB_URI: db:27017
+      SECRET: "shhhh"
+    depends_on:
+        - db
+    ports:
+      - "${PORT}:3000"
+
+  db:
+    image: mongo:3.4
+    expose:
+      - 27017
